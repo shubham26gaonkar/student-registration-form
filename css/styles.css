@@ -1,0 +1,213 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #f4f4f4;
+}
+#title {
+    text-align: center;
+}
+#open-modal-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 20px 24px;
+    font-size: medium;
+    background-color: #007bff;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    height: 90%; /* Set maximum height to 80% of viewport height */
+    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow-y: auto; /* Enable vertical scrollbar if content exceeds height */
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.form-group {
+    margin-bottom: 12px;
+}
+.text-box{
+    width: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    margin-bottom: 9px;
+}
+.text-box input{
+    width: 95%;
+    font-size: 16px;
+    margin-right: 9px;
+    border-radius: 8px;
+    padding-left: 5px
+}
+h2{
+    text-align: center;
+    margin-bottom: 5px;
+}
+button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+label {
+    display:block;
+    margin-bottom: 5px;
+}
+
+/*table*/
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: start;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/*submit*/
+#submit-btn {
+    text-align: center;
+    padding: 5px;
+}
+
+#submit-btn #submit {
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+/*select*/
+select{
+    padding: 8px;
+    border-radius: 10px;
+    border: solid;
+}
+
+/*radio*/
+.radio-button{
+    display: flex;
+    flex-direction: row;
+}
+
+.radio-button .radio-btn{
+    margin-right: 35px;
+}
+.radio-btn input{
+    margin-right: 10px;
+}
+
+
+/*update data*/
+#update-btn {
+    text-align: center;
+}
+
+#update-btn #update-data {
+    font-size: 17px;
+}
+
+/*edit-delete buttons*/
+#edit-icon{
+    font-size: 20px;
+}
+#delete-icon{
+    font-size: 20px;
+}
+button.delete {
+    background-color: #dc3545;
+    border: 2px solid #8a0303;
+    border-radius: 10px;
+    
+}
+
+button.edit {
+    background-color: #28a745;
+    border: 2px solid #19572f;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.action{
+    padding-left: 9%;
+}
+/*update button*/
+#update-btn {
+    text-align: center;
+    padding: 20px;
+    
+}
+
+#update-btn #update-data {
+    font-size: 15px;
+    background-color: #28a745;
+    border: 2px solid #19572f;
+    border-radius: 10px;
+}
+
+/*checkboxes*/
+.check-cont-1{
+    display:flex;
+    flex-direction: row;
+}
+.check-cont-2{
+    margin-right: 30px;
+}
+.check-cont-2 input{
+    margin-right: 6px;
+}
+/*image*/
+img{
+    border-radius: 50%;
+}
+#image{
+    font-size:14px;
+}
+.img-1{
+    padding-left: 5px;
+    padding-top: 5px;
+}
+/* Add this to your existing CSS */
+.image-cell {
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+}
+.img-2{
+    text-align: center;
+}
+#update-image{
+    padding-top: 5px;
+    padding-left: 100px;
+}

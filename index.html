@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="script/display.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/validate.js"></script>
+    <script src="script/insert.js"></script>
+    <script src="script/update.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        img{
+            border-radius: 50%;
+        }
+        .action{
+            padding-left: 9%;
+        }
+    </style>
+</head>
+<body>
+     <!-- Heading -->
+     <h1 id="title">Student Registration Form</h1>
+
+<!-- Modal -->
+    <button id="open-modal-btn">Add Student</button>
+
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-close" id="modal-close">&times;</span>
+                <h2>Add Student</h2>
+            </div>
+            <form id="modal-form" action="post">
+                <div class="form-group">
+                    <label for="name"><b>Name:</b></label>
+                    <div class="text-box">
+                        <input type="text" id="name" name="name" autocomplete="off" required >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email"><b>Email:</b></label>
+                    <div class="text-box">
+                        <input type="email" id="email" name="email" autocomplete="off" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contact"><b>Contact No:</b></label>
+                    <div class="text-box">
+                        <input type="number" id="contact" name="contact" autocomplete="off" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><b>Gender</b></label>
+                    <div class="radio-button">
+                        <div class="radio-btn">
+                            <input type="radio"  name="gender" value="Male" required/>Male
+                        </div>
+                        <div class="radio-btn">
+                            <input type="radio"  name="gender" value="Female" required/>Female
+                        </div>
+                        <div class="radio-btn">
+                            <input type="radio"  name="gender" value="Other" required/>Other
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="course"><b>Course:</b></label>
+                    <select name="course" id="course" required>
+                        <option value="">--Select--</option>
+                        <option value="B.Sc">B.Sc</option>
+                        <option value="B.A">B.A</option>
+                        <option value="B.Com">B.Com</option>
+                        <option value="BCA">BCA</option>
+                    </select>
+                </div>
+            <div class="form-group">
+                    <label for="subject"><b>Subject:</b></label>
+                    <div class="check-cont-1">
+                        <div class="check-cont-2">
+                            <div class="check-cont-3">
+                                <input type="checkbox" name="sub1" id="sub1" value="Physics"/>Physics
+                            </div>
+                            <div class="check-cont-3">
+                                <input type="checkbox" name="sub2" id="sub2" value="Chemistry"/>Chemistry
+                            </div>
+                            <div class="check-cont-3">
+                                <input type="checkbox" name="sub" id="sub3" value="Mathematics"/>Mathematics
+                            </div>
+                        </div>
+                        <div class="check-cont-2">
+                            <div class="check-cont-3">
+                                <input type="checkbox" name="sub" id="sub4" value="Accounts"/>Accounts
+                            </div>
+                            <div class="check-cont-3">
+                                <input type="checkbox" name="sub" id="sub5" value="OOP"/>OOP
+                            </div>
+                            <div class="check-cont-3">
+                                <input type="checkbox" name="sub" id="sub6" value="History"/>History
+                            </div>
+                        </div>
+                        <div class="check-cont-2">
+                            <div class="check-cont-3">
+                                <input type="checkbox" name="sub" id="sub7" value="Economics"/>Economics
+                            </div>
+                            <div class="check-cont-3">
+                                <input type="checkbox" name="sub" id="sub8" value="DBMS"/>DBMS
+                            </div>
+                            <div class="check-cont-3">
+                                <input type="checkbox" name="sub" id="sub9" value="Finance"/>Finance
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <div id="img"><b>Upload Image:</b></div>
+                    <div class="img-1">
+                        <input type="file" name="image" id="image">
+                    </div>
+            </div>
+                <div id="submit-btn">
+                    <button type="button" id="submit" onclick="addStudent()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- display table -->
+    <div id="display-data"></div>
+    
+    <!--update modal -->
+    <!-- Modal for Editing Student -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <div class="modal" id="update-modal">
+        <!--<div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-close" id="update-modal-close">&times;</span>
+                <h2>Update Student</h2>
+            </div>
+            <form id="modal-form" action="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"  required >
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="button" id="update-data">Save Changes</button>
+            </form>
+        </div>-->
+    </div>
+</body>
+</html>
